@@ -29,7 +29,7 @@ function decrease() {
 let moodMessage = "";
 if (!isOn) {
   moodMessage = "Power Off";
-} else if (temp < 20) {
+} else if (temp <= 16) {
   moodMessage = "❄️ It's Cold";
 } else if (temp <= 26) {
   moodMessage = "🌤️ Perfect Weather";
