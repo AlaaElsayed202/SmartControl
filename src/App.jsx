@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import FanPage from './component/FanPage/FanPage';
+import FanPage from './component/FanPage';
 import ConditionerPage from './component/conditionerPage/ConditionerPage';
 import MainHome from './component/MainHome/MainHome';
 
