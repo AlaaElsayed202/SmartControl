@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function MainHome() {
   return (
+    <>
  <nav className="bg-blue-900 text-amber-50 p-4 flex gap-5 justify-center items-center py-6 text-2xl">
       <NavLink
         to="/FanState"
@@ -27,5 +28,8 @@ export default function MainHome() {
         Conditioner
       </NavLink>
     </nav>
+
+    
+    </>
   );
 }

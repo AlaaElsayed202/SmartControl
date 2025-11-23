@@ -6,36 +6,37 @@ export default function ConditionerPage() {
 
   
   function turnOnOff() {
-    setTemp(0); 
-    setIsOn(!isOn); 
-  }
-
-  function increase() {
-    if (isOn && temp < 30) {
-      setTemp(temp + 1);
-    }
-  }
-
- 
-  function decrease() {
-    if (isOn && temp > 16) {
-      setTemp(temp - 1);
-    }
-  }
-
-
-  let moodMessage = "";
-  if (!isOn) {
-    moodMessage = "Power Off";
-  } else if (temp === 0) {
-    moodMessage = "🌡️ No Temperature Set";
-  } else if (temp < 20) {
-    moodMessage = "❄️ It's Cold";
-  } else if (temp <= 26) {
-    moodMessage = "🌤️ Perfect Weather";
+    if (!isOn) {
+    setTemp(16); 
   } else {
-    moodMessage = "🔥 It's Hot";
+    setTemp(0); 
   }
+  setIsOn(!isOn);
+}
+
+function increase() {
+  if (isOn && temp < 30) {
+    setTemp(temp + 1);
+  }
+}
+
+function decrease() {
+  if (isOn && temp > 16) {
+    setTemp(temp - 1);
+  }
+}
+
+let moodMessage = "";
+if (!isOn) {
+  moodMessage = "Power Off";
+} else if (temp < 20) {
+  moodMessage = "❄️ It's Cold";
+} else if (temp <= 26) {
+  moodMessage = "🌤️ Perfect Weather";
+} else {
+  moodMessage = "🔥 It's Hot";
+}
+
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-900 to-gray-700">
